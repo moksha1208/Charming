@@ -67,11 +67,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
   var pkgs = document.querySelectorAll(".pack")
-  for(var pkg of pkg){
+  for(var pkg of pkgs){
+    pkg.click(function() {
+      mainWindow.loadFile("package.html")
+    });
 
-  td.addEventListener("click",function Myfunction(pkg){
-       mainWindow.loadFile("item.html")
-  })
+  // td.addEventListener("click",function Myfunction(pkg){
+  //      mainWindow.loadFile("package.html")
+  // })
 }
   </script>
 
