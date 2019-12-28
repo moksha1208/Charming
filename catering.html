@@ -66,11 +66,16 @@
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
-  var pkgs = document.querySelectorAll(".pack")
-  for(var pkg of pkgs){
-    pkg.click(function() {
-      mainWindow.loadFile("package.html")
-    });
+  $(document).ready(function() {
+    var pkgs = document.querySelectorAll(".pack")
+    pkgs[0].style.backgroungColor = "yellow";
+    document.print(pkgs)
+    for(var pkg of pkgs){
+      pkg.click(function() {
+        window.open('http://www.google.com');
+      });
+  });
+
 
   // td.addEventListener("click",function Myfunction(pkg){
   //      mainWindow.loadFile("package.html")
