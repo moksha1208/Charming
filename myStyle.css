@@ -24,14 +24,3 @@
   font-family: "Times New Roman", sans-serif;
   font-style: oblique;
 }
-
-#packages {
-  white-space: nowrap;
-  border: 1px solid black;
-  overflow: hidden;
-  background-color: red;
-}
-
-#extra {
-  background-color: blue;
-}

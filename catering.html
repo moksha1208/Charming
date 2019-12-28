@@ -78,40 +78,11 @@
   <script>
 
 $(document).ready(function() {
-  $("#ex1").animate({
-    left: '1200px',
-    height: '0px'
-  });
-  $("#ex2").animate({
-    left: '1200px',
-    height: '0px'
-  });
-  $("#exotics").animate({
-    height: '0px'
-  },"slow");
-  $('#click').click(function() {
+  $("#exotics").fadeOut();
 
-    $("#pack1").animate({
-      right: '1200px'
-     },"slow");
-    $("#pack2").animate({
-       right: '1200px'
-     },"slow");
-    $("#pack3").animate({
-        right: '1200px'
-     },"slow");
-    $("#pack4").animate({
-         right: '1200px'
-     },"slow");
-     $("#packages").animate({
-       height: '0px'
-     },"slow");
-     $("#ex1").animate({
-       right: '1200px'
-     },"slow");
-     $("#ex2").animate({
-       right: '1200px'
-     },"slow");
+  $('#click').click(function() {
+    $("#packages").fadeToggle("slow");
+    $("#exotics").delay(500).fadeToggle("slow");
   });
 });
 
