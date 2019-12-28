@@ -26,10 +26,10 @@
 }
 
 #packages {
+  white-space: nowrap;
   border: 1px solid black;
   overflow: hidden;
   background-color: red;
-  width: 80%;
 }
 
 #extra {
