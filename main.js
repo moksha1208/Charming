@@ -6,7 +6,11 @@ const {app, BrowserWindow} = require('electron')
 
 app.on('ready', () => {
   let main = null
-  let loading = new BrowserWindow({show: false, frame: false, transparent: true})
+  let loading = new BrowserWindow({
+    show: false,
+    frame: false,
+    transparent: true
+  })
   loading.setFullScreen(true);
   loading.once('show', () => {
     main = new BrowserWindow({show: false})
@@ -17,7 +21,7 @@ app.on('ready', () => {
         main.show()
         loading.hide()
         loading.close()
-      }, 5000);
+      }, 4000);
     })
     // long loading html
     main.loadFile('index.html')

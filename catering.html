@@ -18,8 +18,10 @@
 
         <div class="row">
 
-          <div class="pack col-md-5 offset-0-5" id="pack1" onclick="">
-            <div class="pkg"><center>Package One</center></div>
+          <div class="pack col-md-5 offset-0-5" id="pack1" onclick="openPackage1()">
+            <!-- <div class="pkg"><center> -->
+              Package One
+            <!-- </center></div> -->
           </div>
 
           <div class="pack col-md-5 offset-md-1" id="pack2">
@@ -65,23 +67,6 @@
 
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    var pkgs = document.querySelectorAll(".pack")
-    pkgs[0].style.backgroungColor = "yellow";
-    document.print(pkgs)
-    for(var pkg of pkgs){
-      pkg.click(function() {
-        window.open('http://www.google.com');
-      });
-  });
-
-
-  // td.addEventListener("click",function Myfunction(pkg){
-  //      mainWindow.loadFile("package.html")
-  // })
-}
-  </script>
 
   <script>
 
@@ -92,6 +77,21 @@ $(document).ready(function() {
     $("#packages").fadeToggle("slow");
     $("#exotics").delay(500).fadeToggle("slow");
   });
+
+  // const {BrowserWindow} = require('electron')
+  function openPackage1() {
+    let main = new BrowserWindow({
+      height: 400,
+      width: 400,
+      title: "Package"
+    })
+    main.loadURL(url.format({
+      pathname: path.join(__dirname, 'package.html').
+      protocol: 'file',
+      slashes: true;
+    }))
+  }
+
 });
 
   </script>
